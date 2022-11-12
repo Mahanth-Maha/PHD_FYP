@@ -1,0 +1,38 @@
+<annotation>
+	<folder>potholes</folder>
+	<filename>33 (2).jpg</filename>
+	<path>M:\PHD_Github\Dataset\train\potholes\33 (2).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>450</width>
+		<height>299</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pothole</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>79</xmin>
+			<ymin>111</ymin>
+			<xmax>315</xmax>
+			<ymax>283</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>pothole</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>308</xmin>
+			<ymin>92</ymin>
+			<xmax>405</xmax>
+			<ymax>149</ymax>
+		</bndbox>
+	</object>
+</annotation>
