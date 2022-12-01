@@ -1,5 +1,6 @@
 from GPSPhoto import gpsphoto
 
+
 def GetLocFromImage(filepath):
     LocA = gpsphoto.getGPSData(filepath)
     Cord = LocA['Latitude'] , LocA['Longitude']
