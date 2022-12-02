@@ -10,6 +10,8 @@ Government bodies can use this app to locate the potholes that there exist in th
 
 ## Testing custom images
 
+extract [the zip file](https://1drv.ms/u/s!AhCzSwMWU4mgjWGoSiiHpkaqP8YB?e=vfD9JB) into ` training_demo\` folder & then run
+
 ```
 pip install -r requirements
 python model_runnner.py
@@ -24,8 +26,8 @@ image will be saved in ` Dataset\Result ` folder
 Result for an image
 ### Image 
 
-![./Dataset/train/potholes/img00000.JPEG](Dataset/train/potholes/img00000.JPEG)
+![Original](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/Dataset/train/potholes/img00000.JPEG)
 
 ### Result
 
-![Dataset\Result\res_img00000.JPEG](Dataset\Result\res_img00000.JPEG)
+![detected](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/Dataset/Result/res_img00000.JPEG)
