@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>img00023.JPEG</filename>
+	<path>M:\phd_fyp_main\TensorFlow\workspace\training_demo\images\img00023.JPEG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>690</width>
+		<height>388</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pothole</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>199</xmin>
+			<ymin>147</ymin>
+			<xmax>359</xmax>
+			<ymax>189</ymax>
+		</bndbox>
+	</object>
+</annotation>
