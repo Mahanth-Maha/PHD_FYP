@@ -1,0 +1,229 @@
+conda info --envs
+conda activate tensorflow
+pip install -q tflite-model-maker
+pip install -q pycocotools
+pip install tensorflow
+conda activate tensorflow
+pip install tensorflow
+pip install pillow Cython lxml jupyter matplotlib
+brew install protobuf
+protobuf.exe
+conda activate tensorflow
+cd C:\Maha\
+cd .\dev\Github\
+ls
+cd .\PHD_FYP\
+ls
+code .
+cd ..
+cd .\Temp\
+ls
+mkdir PHD_FYP_TEMP
+ls
+cd .\Portfolio\
+ls
+cd ..\PHD_FYP_TEMP\
+ls
+ls -al
+ls /a
+ls /l
+ls \l
+ls
+code .
+pip install tflite-support
+& C:/Users/yalla/AppData/Local/Programs/Python/Python311/python.exe -m pip install -U autopep8
+conda deactivate
+conda create --name phd_fyp pandas numpy ipykernel
+conda activate phd_fyp
+pip install -U "tensorflow>=2.5"
+python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+conda deactivate
+conda create --name phd_fyp2 python=3.9 pandas numpy ipykernel tensorflow
+conda activate phd_fyp2
+python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+conda remove tensorflow
+pip install --ignore-installed --upgrade tensorflow==2.5.0
+python -c "import tensorflow as tf;print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+mkdir Tensorflow
+rm .\Tensorflow\
+mkdir TensorFlow
+ls
+cd .\TensorFlow\
+ls
+git clone https://github.com/tensorflow/models.git
+cd C:\Maha\dev\Temp\
+ls
+cd .\PHD_FYP_TEMP\
+ls
+cd .\TensorFlow\
+cd .\models\
+ls 
+cd .\research\
+ls
+Get-ChildItem object_detection/protos/*.proto | foreach {protoc "object_detection/protos/$($_.Name)" --python_out=.}
+conda info --lists
+conda info --envs
+conda activate phd_fyp2
+cd C:\Maha\dev\Temp\PHD_FYP_TEMP\
+ls
+pip install cython
+pip install git+https://github.com/philferriere/cocoapi.git
+pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
+cd TensorFlow/models/research/
+ls
+cp object_detection/packages/tf2/setup.py .
+python -m pip install --use-feature=2020-resolver .
+conda install -c anaconda ipykernel
+python -m ipykernel install --user --name phd_fyp2 --display-name "PHD_FYP2_Kernel"
+cd ..
+ls
+mkdir workspace
+cd .\workspace\
+mkdir training_demo
+cd .\training_demo\
+mkdir annotations
+mkdir exported-models/
+cd .\Documents
+ls
+cd ..
+ls
+cd '.\My Drive\'
+ls
+cd '.\Mewurk Resumes (File responses)\'
+cd '.\Upload The Resume   Name-Mail.pdf (File responses)\'
+ls
+tree
+tree help
+tree --help
+help tree
+mkdir images
+mkdir models
+mkdir pre-trained-models
+cd .\images\
+mkdir test
+mkdir train
+cd ..
+ls
+tree
+pip install labelImg
+labelImg
+conda install pandas
+cd .
+cd ..
+cd TensorFlow/scripts/preprocessing
+ls
+# Create train data:
+python generate_tfrecord.py -x C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/images/train -l C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/label_map.pbtxt -o C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/train.record
+# Create test data:
+python generate_tfrecord.py -x C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/images/test -l C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/label_map.pbtxt -o C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/test.record
+pip install numpy
+pip install pandas
+python generate_tfrecord.py -x C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/images/train -l C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/label_map.pbtxt -o C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/train.record
+conda remove numpy
+conda install numpy
+python generate_tfrecord.py -x C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/images/train -l C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/label_map.pbtxt -o C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/train.record
+conda install pandas
+python generate_tfrecord.py -x C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/images/train -l C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/label_map.pbtxt -o C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/train.record
+pip install protobuf
+pip install protobuf==3.19.4
+python generate_tfrecord.py -x C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/images/train -l C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/label_map.pbtxt -o C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/train.record
+conda remove numpy
+conda install numpy<1.23.0
+python generate_tfrecord.py -x C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/images/train -l C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/label_map.pbtxt -o C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/train.record
+conda install pandas
+python generate_tfrecord.py -x C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/images/train -l C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/label_map.pbtxt -o C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/train.record
+pip install protobuf==3.18
+pip install protobuf==3.20
+pip install protobuf==4.21.5
+pip install protobuf==4.22
+pip install protobuf==4.21.9
+pip install protobuf==3.19.1
+pip install protobuf==3.19.6
+python generate_tfrecord.py -x C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/images/train -l C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/label_map.pbtxt -o C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/train.record
+conda activate phd_fyp2
+cd C:\Maha\dev\Temp\PHD_FYP_TEMP\TensorFlow\scripts\preprocessing
+ls
+python generate_tfrecord.py -x C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/images/train -l C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/label_map.pbtxt -o C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/train.record
+python generate_tfrecord.py -x C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/images/test -l C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/label_map.pbtxt -o C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/test.record
+cd ..
+cd ,..
+cd ..
+cd .\workspace\training_demo\
+tree
+cd .\models\
+mkdir my_ssd_resnet50_v1_fpn
+ls
+cd ..
+cd ../..
+cd ..
+cp TensorFlow/models/research/object_detection/model_main_tf2.py .\TensorFlow\workspace\training_demo\
+ls
+cd .\TensorFlow\workspace\training_demo\
+tree
+ls
+python model_main_tf2.py --model_dir=models/my_ssd_resnet50_v1_fpn --pipeline_config_path=models/my_ssd_resnet50_v1_fpn/pipeline.config
+cd ..
+cd .\workspace\
+cd .\training_demo\
+ls
+cd .\images\
+tree
+ls 
+cd train
+ls
+cd .\TensorFlow\workspace\training_demo\
+cd ..
+cd .\training_demo\
+python model_main_tf2.py --model_dir=models/my_ssd_resnet50_v1_fpn --pipeline_config_path=models/my_ssd_resnet50_v1_fpn/pipeline.config
+labelImg
+python model_main_tf2.py --model_dir=models/my_ssd_resnet50_v1_fpn --pipeline_config_path=models/my_ssd_resnet50_v1_fpn/pipeline.config
+cd C:\Maha\dev\Temp\PHD_FYP_TEMP\TensorFlow\scripts\preprocessing
+python generate_tfrecord.py -x C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/images/train -l C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/label_map.pbtxt -o C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/train.record
+python generate_tfrecord.py -x C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/images/test -l C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/label_map.pbtxt -o C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/test.record
+labelImg.exe
+python generate_tfrecord.py -x C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/images/train -l C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/label_map.pbtxt -o C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/train.record
+python generate_tfrecord.py -x C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/images/test -l C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/label_map.pbtxt -o C:/Maha/dev/Temp/PHD_FYP_TEMP/TensorFlow/workspace/training_demo/annotations/test.record
+cd ..
+cd .\workspace\training_demo\
+ls
+python model_main_tf2.py --model_dir=models/my_ssd_resnet50_v1_fpn --pipeline_config_path=models/my_ssd_resnet50_v1_fpn/pipeline.config
+cd C:\Maha\dev\Temp\PHD_FYP_TEMP\
+ls
+cd .\TensorFlow\
+ls
+cd .\workspace\
+ls
+cd .\training_demo\
+ls
+cd .\pre-trained-models\
+ls
+cd .\ssd_resnet50_v1_fpn_640x640_coco17_tpu-8\
+ls
+cd ..
+code .
+cd ..
+cd .\PHD_FYP_TEMP\TensorFlow\workspace\training_demo\
+ls
+python model_main_tf2.py --model_dir=models/my_ssd_resnet50_v1_fpn --pipeline_config_path=models/my_ssd_resnet50_v1_fpn/pipeline.config
+conda activate phd_fyp2
+python model_main_tf2.py --model_dir=models/my_ssd_resnet50_v1_fpn --pipeline_config_path=models/my_ssd_resnet50_v1_fpn/pipeline.config
+cd ..
+cp TensorFlow/models/research/object_detection/exporter_main_v2.py C:\Maha\dev\Temp\PHD_FYP_TEMP\TensorFlow\workspace\training_demo\
+ls
+cd C:\Maha\dev\Temp\PHD_FYP_TEMP\TensorFlow\workspace\training_demo>
+cd C:\Maha\dev\Temp\PHD_FYP_TEMP\TensorFlow\workspace\training_demo\
+ls
+python .\exporter_main_v2.py --input_type image_tensor --pipeline_config_path .\models\my_ssd_resnet50_v1_fpn\pipeline.config --trained_checkpoint_dir .\models\my_ssd_resnet50_v1_fpn\ --output_directory .\exported-models\my_model
+tree
+code ..\..\..\TensorFlow\
+Get-History -Count 50
+Get-History 
+Get-ChildItem -Path "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine" | `
+Format-Table -AutoSize
+cd C:\Users\yalla\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine
+cd
+cd .
+cd C:\Maha\dev\Temp\PHD_FYP_TEMP\
+ls
+cd .\Assets\
+cp C:\Users\yalla\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt .
