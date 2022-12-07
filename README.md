@@ -41,7 +41,7 @@ install python-3.9.X
 go to the root folder of the project and run the command below (it is recommended to use a venv for testing the project)
 
 ```
-pip install tensorflow=2.5.0 numpy opencv-python tensorflow-object-detection-api
+pip install tensorflow=2.5.0 numpy opencv-python tensorflow-object-detection-api customtkinter
 ```
 ### Running in a loop (debugging purpose)
 ```

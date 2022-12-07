@@ -44,7 +44,7 @@ class PHD_API:
         input_tensor = tf.convert_to_tensor(image)
         input_tensor = input_tensor[tf.newaxis, ...]
         detections = self.detect_fn(input_tensor)
-        print(detections)
+        # print(detections)
         num_detections = int(detections.pop('num_detections'))
         detections = {key: value[0, :num_detections].numpy() for key, value in detections.items()}
         detections['num_detections'] = num_detections
@@ -69,20 +69,19 @@ class PHD_API:
         return image_with_detections,result,num_of_detections
     
     def save_result(self,original_image,image_with_detections):
-        self.PATH_2_SAVE_ANNOTED_PIC = './Dataset/Result/res_' + str(int(time.time())) + '_'
+        self.PATH_2_SAVE_ANNOTED_PIC = './Dataset/Result/res_' + str(int(time.time()))
         try:
-            file_name_ = original_image.split('\\')[-1]
+            file_name_ = original_image.split('.')[-1]
             isWritten = cv2.imwrite(
-                self.PATH_2_SAVE_ANNOTED_PIC + file_name_, image_with_detections)
+                self.PATH_2_SAVE_ANNOTED_PIC +"."+ file_name_, image_with_detections)
             if isWritten:
                 print(
-                    f'[+] Image is successfully saved as file at {self.PATH_2_SAVE_ANNOTED_PIC + file_name_}')
+                    f'[+] Image is successfully saved as file at {self.PATH_2_SAVE_ANNOTED_PIC+ "."+file_name_}')
             else:
-                print('[-] Image is not saved', isWritten)
+                print('[-] Image is not saved')
         except Exception:
             print('[-] ERR :', original_image)
-        print('[+] Re-Running : press Enter or enter exit to exit the program\n')
-        return self.PATH_2_SAVE_ANNOTED_PIC + file_name_
+        return self.PATH_2_SAVE_ANNOTED_PIC +"."+ file_name_
         
     def run_phd(self,input_image_path):
         """
