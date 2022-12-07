@@ -1,17 +1,19 @@
-import warnings
-import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
 from object_detection.utils import visualization_utils as viz_utils
 from object_detection.utils import label_map_util
 import time
-import argparse
 import cv2
 import tensorflow as tf
-import pathlib
 import os
+
+# import warnings
+# import pathlib
+# import argparse
+# import matplotlib.pyplot as plt
+
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'    # Suppress TensorFlow logging (1)
-warnings.filterwarnings('ignore')   # Suppress Matplotlib warnings
+# warnings.filterwarnings('ignore')   # Suppress Matplotlib warnings
 
 gpus = tf.config.experimental.list_physical_devices('GPU')
 for gpu in gpus:
@@ -35,6 +37,24 @@ MIN_CONF_THRESH = float(0.60)
 # LOAD THE MODEL
 PATH_TO_SAVED_MODEL = PATH_TO_MODEL_DIR + "/saved_model"
 
+print('''
+██████╗  ██████╗ ████████╗██╗  ██╗ ██████╗ ██╗     ███████╗    ██████╗ ███████╗████████╗███████╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗    
+██╔══██╗██╔═══██╗╚══██╔══╝██║  ██║██╔═══██╗██║     ██╔════╝    ██╔══██╗██╔════╝╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║    
+██████╔╝██║   ██║   ██║   ███████║██║   ██║██║     █████╗      ██║  ██║█████╗     ██║   █████╗  ██║        ██║   ██║██║   ██║██╔██╗ ██║    
+██╔═══╝ ██║   ██║   ██║   ██╔══██║██║   ██║██║     ██╔══╝      ██║  ██║██╔══╝     ██║   ██╔══╝  ██║        ██║   ██║██║   ██║██║╚██╗██║    
+██║     ╚██████╔╝   ██║   ██║  ██║╚██████╔╝███████╗███████╗    ██████╔╝███████╗   ██║   ███████╗╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║    
+╚═╝      ╚═════╝    ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝    ╚═════╝ ╚══════╝   ╚═╝   ╚══════╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝    
+                                                                                                                                           
+███████╗██╗███╗   ██╗ █████╗ ██╗         ██╗   ██╗███████╗ █████╗ ██████╗     ██████╗ ██████╗  ██████╗      ██╗███████╗ ██████╗████████╗   
+██╔════╝██║████╗  ██║██╔══██╗██║         ╚██╗ ██╔╝██╔════╝██╔══██╗██╔══██╗    ██╔══██╗██╔══██╗██╔═══██╗     ██║██╔════╝██╔════╝╚══██╔══╝   
+█████╗  ██║██╔██╗ ██║███████║██║          ╚████╔╝ █████╗  ███████║██████╔╝    ██████╔╝██████╔╝██║   ██║     ██║█████╗  ██║        ██║      
+██╔══╝  ██║██║╚██╗██║██╔══██║██║           ╚██╔╝  ██╔══╝  ██╔══██║██╔══██╗    ██╔═══╝ ██╔══██╗██║   ██║██   ██║██╔══╝  ██║        ██║      
+██║     ██║██║ ╚████║██║  ██║███████╗       ██║   ███████╗██║  ██║██║  ██║    ██║     ██║  ██║╚██████╔╝╚█████╔╝███████╗╚██████╗   ██║      
+╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝       ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝     ╚═╝  ╚═╝ ╚═════╝  ╚════╝ ╚══════╝ ╚═════╝   ╚═╝      
+
+-....- -....- -....- -....-    -.-- .- .-.. .-.. .-    -- .- .... .- -. - ....    -....- -....- -....- -....- 
+                                                                                                                                           
+      ''')
 print('Loading model...', end='')
 start_time = time.time()
 
@@ -64,7 +84,7 @@ def load_image_into_numpy_array(path):
 
 
 def generate_result(IMAGE_PATHS):
-    print('Running inference for {}... '.format(IMAGE_PATHS), end='')
+    # print('Running inference for {}... '.format(IMAGE_PATHS), end='')
     image = cv2.imread(IMAGE_PATHS)
     image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     image_expanded = np.expand_dims(image_rgb, axis=0)
@@ -103,7 +123,7 @@ def generate_result(IMAGE_PATHS):
         min_score_thresh=0.5,
         agnostic_mode=False)
 
-    print('Done')
+    # print('Done')
     return image_with_detections
     # # DISPLAYS OUTPUT IMAGE
     # cv2.imshow("TEST",image_with_detections)
@@ -129,27 +149,32 @@ def generate_result(IMAGE_PATHS):
 
 # images_test_ = [l for l in list_files if l.endswith('.JPEG')]
 
-import time
 
-PATH_2_SAVE_ANNOTED_PIC='./Dataset/Result/res_'+ str(int(time.time())) +'_'
+PATH_2_SAVE_ANNOTED_PIC = './Dataset/Result/res_' + str(int(time.time())) + '_'
 
 # for img_name in images_test_:
+
+
 def main():
     while 1:
-        img_name = input("Paste the path of input file : ")
-        if img_name in ('', " ", "exit","EXIT","No"):
+        img_name = input("\nPaste the path of input file : ")
+        if img_name in ('', " ", "exit", "EXIT", "No"):
             break
         try:
             image_with_detections = generate_result(img_name)
             print(img_name)
             file_name_ = img_name.split('\\')[-1]
-            isWritten = cv2.imwrite( PATH_2_SAVE_ANNOTED_PIC + file_name_ , image_with_detections)
+            isWritten = cv2.imwrite(
+                PATH_2_SAVE_ANNOTED_PIC + file_name_, image_with_detections)
             if isWritten:
-                print(f'[+] Image is successfully saved as file at {PATH_2_SAVE_ANNOTED_PIC + file_name_}')
+                print(
+                    f'[+] Image is successfully saved as file at {PATH_2_SAVE_ANNOTED_PIC + file_name_}')
             else:
-                print('[-] Image is not saved',isWritten)
+                print('[-] Image is not saved', isWritten)
         except Exception:
             print('[-] ERR :', img_name)
+        print('[+] Re-Running : press Enter or enter exit to exit the program\n')
+
 
 if __name__ == '__main__':
     main()

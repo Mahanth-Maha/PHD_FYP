@@ -13,7 +13,7 @@ Government bodies can use this app to locate the potholes that there exist in th
 extract [the zip file](https://1drv.ms/u/s!AhCzSwMWU4mgjWGoSiiHpkaqP8YB?e=vfD9JB) into ` training_demo\` folder & then run
 
 ```
-pip install -r requirements
+pip install tensorflow=2.5.0 numpy opencv-python tensorflow-object-detection-api
 python model_runnner.py
 ```
 
