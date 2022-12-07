@@ -175,6 +175,24 @@ def main():
             print('[-] ERR :', img_name)
         print('[+] Re-Running : press Enter or enter exit to exit the program\n')
 
+def run_main(img_name):
+    if img_name in ('', " ", "exit", "EXIT", "No"):
+        return False
+    try:
+        image_with_detections = generate_result(img_name)
+        # print(img_name)
+        file_name_ = img_name.split('\\')[-1]
+        isWritten = cv2.imwrite(
+            PATH_2_SAVE_ANNOTED_PIC + file_name_, image_with_detections)
+        if isWritten:
+            print(
+                f'[+] Image is successfully saved as file at {PATH_2_SAVE_ANNOTED_PIC + file_name_}')
+        else:
+            print('[-] Image is not saved', isWritten)
+    except Exception:
+        print('[-] ERR :', img_name)
+    print('[+] Press any key to EXIT\n')
+    return image_with_detections
 
 if __name__ == '__main__':
     main()

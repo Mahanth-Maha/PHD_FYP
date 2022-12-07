@@ -42,10 +42,31 @@ go to the root folder of the project and run the command below (it is recommende
 
 ```
 pip install tensorflow=2.5.0 numpy opencv-python tensorflow-object-detection-api
+```
+### Running in a loop (debugging purpose)
+```
 python model_runnner.py
 ```
+paste the image path when prompted (no image is shown) , after Successfully generating output, It re-runs the program again. To exit the program Press "exit" and enter enter(Return) Key.
 
-paste the image path when prompted
+### Running as a product for an image (CLI)
+
+By running this python script it opens the Input image and the output image generated in separate window.
+
+Note : Replace the <image_path> with the actual image path while running the Script.
+```
+python Main_CLI.py <image_path>
+```
+
+### Running as a product for an image (GUI)
+
+Select the image form the drop down and click Run.
+
+```
+python Main_GUI.py
+```
+
+### THe Results
 
 the Resulting image will be saved in ` Dataset\Result ` folder
 
