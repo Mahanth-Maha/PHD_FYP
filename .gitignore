@@ -2,6 +2,8 @@
 /training_demo/pre-trained-models/
 /training_demo/images/
 /training_demo/exported-models/*
+/src/test_maha
+/Dataset/Result
 
 ./.vscode/*
 .vscode
