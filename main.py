@@ -35,6 +35,7 @@ class PHD_FYP_WEB_APP_API:
 
 def main():
     web_app = PHD_FYP_WEB_APP_API()
+    
     imgpaths = [
         "C:/Maha/Temp/FullSizeRender.jpg",
         "C:/Maha/Temp/IMG_5892.JPEG",
@@ -54,15 +55,7 @@ def main():
     print("[+] MAP GENERATED")
     
     # web_app.DESTROY()
-    
-    
-    
+
 
 if __name__ == '__main__':
     main()
-        
-        
-        
-
-    
-    

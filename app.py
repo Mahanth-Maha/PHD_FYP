@@ -1,6 +1,9 @@
 import setup 
 
 import os
+# import shutil
+from PIL import Image
+
 from flask import Flask, app, request, render_template, send_from_directory
 
 from main import PHD_FYP_WEB_APP_API 
@@ -42,45 +45,67 @@ def maps():
 
 @app.route('/result', methods=["GET", "POST"])
 def nres():
-    
+    NoFIleErr = False
+    NoPotHolesErr = False
     if request.method == "POST":
-        f = request.files['image']
-        basepath = os.path.dirname(__file__)
-        filepath = os.path.join(basepath, 'uploads', f.filename)
-        f.save(filepath)
-        nresult = "NULL"
-        print(f'{filepath=}\n,{f.filename=}\n,{basepath=}')
-        detect_status = 0
-        image_output_path, detect_Scores, detect_status = phd_run.run_phd_and_save_img(input_image_path=filepath)
-        print(f'{image_output_path=}\n, {detect_Scores=}\n, {detect_status=}\n')
-        if detect_status == 0:
-            nresult = "No potholes detected"
-        elif detect_status == 1:
-            nresult = "Pothole detected"
-        else:
-            nresult = "Potholes detected"
-        loc_status = web_app.get_img_data(filepath)
-        loc_Err_msg = ''
-        map_Err_msg = ''
-        if loc_status[0] == False:
-            loc_Err_msg = loc_status[1]
-        map_staus = web_app.generate_map('templates/maps.html')
-        if map_staus[0] == False:
-            map_Err_msg = loc_status[1]
-        if detect_status !=0 : 
-            phd_desc = f"Number of Potholes = {detect_status}\n"
-        else :
-            phd_desc = f"No Potholes detected \n"
-        if loc_Err_msg:
-            loc_desc = "Location Data Missing Since : " + loc_Err_msg +'\n'
-        else:
-            loc_desc = "Location Data : Avaliable"+ '\n'
-        if map_Err_msg:
-            map_desc = "Map data Missing Since :" + map_Err_msg +'\n'
-        else:
-            map_desc = "Map Status : Avaliable "+ '\nMAP GENERATED\n'
-            
-        return render_template('pred_res.html', prediction=nresult,res_desc = phd_desc,loc_desc=loc_desc,map_desc=map_desc)
+        try:
+            uploaded_img_to_show = 'static/temp/original_img.JPEG'
+            resulted_img_to_show = 'static/temp/result_img.JPEG'
+            f = request.files['image']
+            basepath = os.path.dirname(__file__)
+            filepath = os.path.join(basepath, 'uploads', f.filename)
+            f.save(filepath)
+            nresult = "NULL"
+            print(f'{filepath=}\n,{f.filename=}\n,{basepath=}')
+            detect_status = 0
+            image_output_path, detect_Scores, detect_status = phd_run.run_phd_and_save_img(input_image_path=filepath)
+            print(f'{image_output_path=}\n, {detect_Scores=}\n, {detect_status=}\n')
+            NoPotHolesErr = False
+            if detect_status == 0:
+                nresult = "No potholes detected"
+                NoPotHolesErr = True
+            elif detect_status == 1:
+                nresult = "Pothole detected"
+            else:
+                nresult = "Potholes detected"
+            loc_status = web_app.get_img_data(filepath)
+            # Open the image file
+            with Image.open(filepath) as img:
+                img.save(uploaded_img_to_show , format='JPEG')
+            with Image.open(image_output_path) as img:
+                img.save(resulted_img_to_show , format='JPEG')
+            # COPYING
+            # shutil.copyfile(filepath, uploaded_img_to_show)
+            # shutil.copyfile(image_output_path, resulted_img_to_show)
+        
+            loc_Err_msg = ''
+            map_Err_msg = ''
+            if loc_status[0] == False:
+                loc_Err_msg = loc_status[1]
+            map_staus = web_app.generate_map('templates/maps.html')
+            if map_staus[0] == False:
+                map_Err_msg = loc_status[1]
+            if detect_status !=0 : 
+                phd_desc = f"Number of Potholes = {detect_status}\n"
+            else :
+                phd_desc = f"No Potholes detected \n"
+            if loc_Err_msg:
+                loc_desc = "Location Data Missing Since : " + loc_Err_msg +'\n'
+            else:
+                loc_desc = "Location Data : Avaliable"+ '\n'
+            if map_Err_msg:
+                map_desc = "Map data Missing Since :" + map_Err_msg +'\n'
+            else:
+                map_desc = "Map Status : Avaliable "+ '\nMAP GENERATED\n'
+        except Exception as e:
+            nresult = False
+            map_desc = False
+            phd_desc = False
+            loc_desc = False
+            NoFIleErr = "Please select a valid location"
+        return render_template('pred_res_img.html', prediction=nresult,res_desc = phd_desc,loc_desc=loc_desc,map_desc=map_desc,NoFIleErr = NoFIleErr,NoPotHolesErr = NoPotHolesErr)
+
+
 
 if __name__ == "__main__":
     app.run(debug=False, port=8080)

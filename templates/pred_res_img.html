@@ -11,7 +11,7 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png" type="">
+  <link rel="shortcut icon" href={{ url_for("static", filename = "images/favicon.png" )}} type="">
 
   <title> Results of Prediction (PHD) </title>
 
@@ -31,22 +31,11 @@
    <link href={{ url_for("static", filename = "css/style.css" )}} rel="stylesheet" />
    <!-- responsive style -->
    <link href={{ url_for("static", filename = "css/responsive.css" )}}  rel="stylesheet" />
-   
-  <style>
-  img{
-  max-width:180px;
-}
-input[type=file]{
-padding:10px;
-}
-</style>
 
 </head>
 
-<body class="sub_page">
-
+<body >
   <div class="hero_area">
-
     <div class="hero_bg_box">
       <img src="images/hero-bg.png" alt="">
     </div>
@@ -91,15 +80,47 @@ padding:10px;
     </header>
     <!-- end header section -->
   </div>
-
  <!-- department section -->
+ <div class=centered >
+ {% if NoFIleErr %}
+ <h5 class=centered class="title text-muted"> 
+   {{NoFIleErr}}
+   <div class="btn-box">
+    <a href="{{ url_for('pred_res')}}">
+      Predict - Try Again
+    </a>
+  </div>
+ </h5>
+ {% elif NoPotHolesErr %}
+ <h5 class=centered class="title text-muted"> 
+  No Potholes Detected in the upoladed image please try again 
+   <div class="btn-box">
+    <a href="{{ url_for('pred_res')}}">
+      Predict - Try Again
+    </a>
+  </div>
+ </h5>
  
- </div class=centered >
-  <form class="centered" id="form" action="/result" method="post"  enctype="multipart/form-data" style= "height: 200px;">
-   <input type="file" id="imageupload"  name="image" accept="image/*" class="input-image">
-   <input type="submit" class="submitbtn" value="Detect">
- </form>
-
+ {% elif prediction %}
+ <div>
+  <h5 class=centered class="title text-muted"> 
+    Result : {{prediction}}
+  </h5>
+</div>
+ <div  style = "display:flex;" >
+  <img src={{url_for('static',filename = 'temp/original_img.JPEG')}} style="width:100px;height:100px;float:left;padx:10px;pady:10px;">
+  <img src={{url_for('static',filename = 'temp/result_img.JPEG')}} style="width:100px;height:100px;float:right;padx:10px;pady:10px;">
+ </div>
+ <div>
+  <br>
+  <p> {{ phd_desc }}</p>
+  <br>
+  <p> {{ loc_desc }}</p>
+  <br>
+  <p> {{ map_desc }}</p>
+</div>
+ {% endif %}
+</div>
  <!-- end department section -->
 
  
@@ -135,16 +156,16 @@ padding:10px;
           </div>
           <div class="footer_social">
             <a href="">
-              <i class="fa fa-facebook" aria-hidden="true">facebook</i>
+              <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
             <a href="">
-              <i class="fa fa-twitter" aria-hidden="true">twitter</i>
+              <i class="fa fa-twitter" aria-hidden="true"></i>
             </a>
             <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true">linkedin</i>
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
             </a>
             <a href="">
-              <i class="fa fa-github" aria-hidden="true">github</i>
+              <i class="fa fa-github" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -194,6 +215,21 @@ padding:10px;
  <!-- owl slider -->
  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
  </script>
+   <!-- custom js -->
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
  <!-- image display js -->
  <script>
   function readURL(input) {

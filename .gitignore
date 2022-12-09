@@ -4,7 +4,10 @@
 /training_demo/exported-models/*
 /src/test_maha/chatgpt
 /Dataset/Result
-/uploads/
+/uploads/*
+/database/allok.txt
+/static/temp/*
+
 
 ./.vscode/*
 .vscode

@@ -6,17 +6,23 @@ class Setup:
     def __init__(self):
         # List of dependencies to install
         # Open the file for reading
-        with open("requirements.txt", "r") as file:
-            # Read the file line by line
-            lines = file.readlines()
-        self.dependencies = []
-        for line in lines:
-            # Strip the whitespace from the line and add it to the list of names
-            self.dependencies.append(line.strip())
-        # Install each dependency that's not already installed
-        for dependency in self.dependencies:
-            if not self.dependency_installed(dependency):
-                subprocess.run(["pip", "install", dependency])
+        db_folder = 'database'
+        file_path = os.path.join(db_folder, 'allok.txt')
+        if os.path.exists(file_path):
+            pass
+        else:
+            open(file_path, 'w').close()
+            with open("requirements.txt", "r") as file:
+                # Read the file line by line
+                lines = file.readlines()
+            self.dependencies = []
+            for line in lines:
+                # Strip the whitespace from the line and add it to the list of names
+                self.dependencies.append(line.strip())
+            # Install each dependency that's not already installed
+            for dependency in self.dependencies:
+                if not self.dependency_installed(dependency):
+                    subprocess.run(["pip", "install", dependency])
 
     # Function to check if a dependency is installed
     def dependency_installed(self,dependency):
