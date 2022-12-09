@@ -11,7 +11,7 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png" type="">
+  <link rel="shortcut icon" href={{ url_for("static", filename = "images/favicon.png" )}} type="">
 
   <title> About (PHD) </title>
 
@@ -95,7 +95,7 @@
               </h2>
             </div>
             <p>
-              About Text 101
+              Our project is a system that uses sensors and cameras to automatically detect and report potholes on roads. Potholes are a common problem on roads and can cause damage to vehicles and pose a safety hazard to drivers and passengers. By using sensors and cameras, a pothole detection system can quickly and accurately identify potholes and alert road maintenance crews to their location so that they can be repaired.
             </p>
             </a>
           </div>
@@ -105,9 +105,21 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <p>
-            Text 102
-          </p>
+          <div>
+            <p>
+              There are several different technologies that can be used for pothole detection, including lasers, radar, and cameras. Laser sensors can be used to measure the depth and shape of potholes, while radar sensors can detect changes in the road surface that may indicate the presence of a pothole. Cameras can be used to capture images of the road surface and identify potholes based on their shape and location.
+            </p>
+          </div>
+          <div>
+            <p>
+              Once a pothole is detected, the system can automatically generate a report and send it to road maintenance crews via a wireless network. This allows for quick and efficient repair of potholes, which can help prevent further damage to vehicles and improve road safety.
+            </p>
+          </div>
+          <div>
+            <p>
+              Overall, a pothole detection project can provide significant benefits by improving road safety and reducing the need for costly and time-consuming manual inspection of roads.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -120,47 +132,6 @@
   <footer class="footer_section">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-lg-3 footer_col">
-          <div class="footer_contact">
-            <h4>
-              Reach at..
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  JNTUACEA, Ananthapur
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +01 1234567890
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  demo@gmail.com
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="footer_social">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true">facebook</i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true">twitter</i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true">linkedin</i>
-            </a>
-            <a href="">
-              <i class="fa fa-github" aria-hidden="true">github</i>
-            </a>
-          </div>
-        </div>
         <div class="col-md-6 col-lg-3 footer_col">
           <div class="footer_detail">
             <h4>
@@ -177,10 +148,10 @@
               Links
             </h4>
             <div class="footer_links">
-              <a class="active" href="{{ url_for('index' )}}">
+              <a class="" href="{{ url_for('index' )}}">
                 Home
               </a>
-              <a class="" href="{{ url_for('about')}}">
+              <a class="active" href="{{ url_for('about')}}">
                 About
               </a>
               <a class="" href="{{ url_for('predict' )}}">

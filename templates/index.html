@@ -81,63 +81,6 @@
       </div>
     </header>
     <!-- end header section -->
-    <!-- slider section -->
-    <section class="slider_section ">
-      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7">
-                  <div class="detail-box">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item ">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7">
-                  <div class="detail-box">
-                    <h1>
-                      text 101
-                    </h1>
-                    <p>
-                    text 102
-                    </p>
-                    <div class="btn-box">
-                      <a href="{{ url_for('predict')}}" class="btn1">
-                        Read More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7">
-                  <div class="detail-box">
-                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <ol class="carousel-indicators">
-          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-          <li data-target="#customCarousel1" data-slide-to="1"></li>
-          <li data-target="#customCarousel1" data-slide-to="2"></li>
-        </ol>
-      </div>
-
-    </section>
-    <!-- end slider section -->
   </div>
 
 
@@ -148,24 +91,24 @@
       <div class="container ">
         <div class="heading_container heading_center">
           <h2>
-            Models Employeed for the Project
+            Features for the Project
           </h2>
           <p>
-            Transfer Learning Models
+            Pot hole detection
           </p>
         </div>
         <div class="row">
           <div class="col-md-3">
             <div class="box ">
               <div class="img-box">
-                <img src="images/s1.png" alt="">
+                <img src="{{ url_for("static", filename = "images/s1.png") }}" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  VGG16
+                  Training of the model
                 </h5>
                 <p>
-                 VGG-16 is a convolutional neural network that is 16 layers deep. The pretrained network can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals.
+                 We have used a whooping 1000 image data set to train the model in our custom build PC (personal computer). We have split At 9:1 ratio to train and test the model with 50000 epochs to give the best result.
                 </p>
               </div>
             </div>
@@ -173,14 +116,14 @@
           <div class="col-md-3">
             <div class="box ">
               <div class="img-box">
-                <img src="images/s2.png" alt="">
+                <img src="{{ url_for("static", filename = "images/s2.png") }}" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  ResNet50
+                  SSD ResNet50 v1 Model
                 </h5>
                 <p>
-                 ResNet50 is a convolutional neural network that is 50 layers deep. The pretrained network can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals.
+                  ResNet50 is a convolutional neural network that is 50 layers deep. The pretrained network can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals.
                 </p>
               </div>
             </div>
@@ -188,14 +131,14 @@
           <div class="col-md-3">
             <div class="box ">
               <div class="img-box">
-                <img src="images/s3.png" alt="">
+                <img src="{{ url_for("static", filename = "images/s3.png") }}" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  InceptionV3
+                  Performance
                 </h5>
                 <p>
-                 InceptionV3 is a convolutional neural network that is  48 layers deep. The pretrained network can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals.
+                  We have trained the model until it reaches the lowest loss, About 99.9% of accuracy and only 0.1% Loss. It is able to effectively learn and recognize complex patterns in images, thanks to its deep convolutional architecture.
                 </p>
               </div>
             </div>
@@ -203,14 +146,14 @@
           <div class="col-md-3">
             <div class="box ">
               <div class="img-box">
-                <img src="images/s4.png" alt="">
+                <img src="{{ url_for("static", filename = "images/s4.png") }}" alt="">
               </div>
               <div class="detail-box">
                 <h5>
-                  Xception
+                  Limitations
                 </h5>
                 <p>
-                  Xception is a convolutional neural network that is 71 layers deep. The pretrained network can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals.
+                  It takes a considerable amount of time to load the model into the web app, GUI or CLI applications. it is a large and complex model, which can require a significant amount of computational resources to train and use.
                 </p>
               </div>
             </div>
@@ -240,7 +183,7 @@
               </h2>
             </div>
             <p>
-               About 101 text
+              Our project is a system that uses sensors and cameras to automatically detect and report potholes on roads. Potholes are a common problem on roads and can cause damage to vehicles and pose a safety hazard to drivers and passengers. By using sensors and cameras, a pothole detection system can quickly and accurately identify potholes and alert road maintenance crews to their location so that they can be repaired.
             </p>
             <a href="{{ url_for('about')}}">
               Read More
@@ -254,86 +197,45 @@
   <!-- end about section -->
 
   
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-3 footer_col">
-          <div class="footer_contact">
-            <h4>
-              Reach at..
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  JNTUACEA, Ananthapur
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +01 1234567890
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  demo@gmail.com
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="footer_social">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-github" aria-hidden="true"></i>
-            </a>
-          </div>
+ <!-- footer section -->
+ <footer class="footer_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-3 footer_col">
+        <div class="footer_detail">
+          <h4>
+            About
+          </h4>
+          <p>
+            This web app is designed for The Pot Hole Detection on images and open CV and TensorFlow. After detecting the pothole, it will also mark the location of the pothole in the Google Maps.
+          </p>
         </div>
-        <div class="col-md-6 col-lg-3 footer_col">
-          <div class="footer_detail">
-            <h4>
+      </div>
+      <div class="col-md-6 col-lg-2 mx-auto footer_col">
+        <div class="footer_link_box">
+          <h4>
+            Links
+          </h4>
+          <div >
+            <a class="active" href="{{ url_for('index' )}}">
+              Home
+            </a>
+            <a class="" href="{{ url_for('about')}}">
               About
-            </h4>
-            <p>
-              This web app is designed for The Pot Hole Detection on images and open CV and TensorFlow. After detecting the pothole, it will also mark the location of the pothole in the Google Maps.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-2 mx-auto footer_col">
-          <div class="footer_link_box">
-            <h4>
-              Links
-            </h4>
-            <div class="footer_links">
-              <a class="active" href="{{ url_for('index' )}}">
-                Home
-              </a>
-              <a class="" href="{{ url_for('about')}}">
-                About
-              </a>
-              <a class="" href="{{ url_for('predict' )}}">
-                Predict
-              </a>
-              <a class="" href="{{ url_for('maps' )}}">
-                Maps
-              </a>
-            </div>
+            </a>
+            <a class="" href="{{ url_for('predict' )}}">
+              Predict
+            </a>
+            <a class="" href="{{ url_for('maps' )}}">
+              Maps
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </footer>
-  <!-- footer section -->
+  </div>
+</footer>
+<!-- footer section -->
 
   <!-- jQery -->
   <script type="text/javascript" href={{ url_for("static", filename = "js/jquery-3.4.1.min.js" )}}></script>

@@ -34,10 +34,11 @@
 
 </head>
 
-<body >
+<body class="sub_page">
   <div class="hero_area">
+
     <div class="hero_bg_box">
-      <img src="images/hero-bg.png" alt="">
+      <img src={{ url_for("static", filename = "images/hero-bg.png") }} alt="">
     </div>
 
     <!-- header section strats -->
@@ -108,8 +109,12 @@
   </h5>
 </div>
  <div  style = "display:flex;" >
-  <img src={{url_for('static',filename = 'temp/original_img.JPEG')}} style="width:100px;height:100px;float:left;padx:10px;pady:10px;">
-  <img src={{url_for('static',filename = 'temp/result_img.JPEG')}} style="width:100px;height:100px;float:right;padx:10px;pady:10px;">
+    <div class="img-box">
+      <img src={{url_for('static',filename = 'temp/original_img.JPEG')}} style="width:100px;height:100px;float:left;padx:10px;pady:10px;">
+    </div>
+    <div class="img-box">
+      <img src={{url_for('static',filename = 'temp/result_img.JPEG')}} style="width:100px;height:100px;float:right;padx:10px;pady:10px;">
+    </div>
  </div>
  <div>
   <br>
@@ -128,47 +133,6 @@
   <footer class="footer_section">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-lg-3 footer_col">
-          <div class="footer_contact">
-            <h4>
-              Reach at..
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  JNTUACEA, Ananthapur
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +01 1234567890
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  demo@gmail.com
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="footer_social">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-github" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
         <div class="col-md-6 col-lg-3 footer_col">
           <div class="footer_detail">
             <h4>
@@ -215,20 +179,6 @@
  <!-- owl slider -->
  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
  </script>
-   <!-- custom js -->
-  
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 
  <!-- image display js -->
  <script>
@@ -246,34 +196,5 @@
         }
  </script>  
 </body>
-
-<style>
-  div.centered {
-    margin: auto;
-    width: 50%;
-  }
-  form { 
-    margin: 0 auto; 
-    width:250px;
-  }
-  /* Three image containers (use 25% for four, and 50% for two, etc) */
-  .column {
-    float: left;
-    width: 50%;
-    padding: 5px;
-  }
-
-  /* Clear floats after image containers */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  @media screen and (max-width: 500px) {
-    .column {
-      width: 100%;
-    }
-  }
-</style>
 
 </html>

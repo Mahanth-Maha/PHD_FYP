@@ -1,5 +1,7 @@
 import setup 
 
+import timeit
+
 import os
 # import shutil
 from PIL import Image

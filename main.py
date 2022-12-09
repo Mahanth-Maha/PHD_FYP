@@ -36,25 +36,25 @@ class PHD_FYP_WEB_APP_API:
 def main():
     web_app = PHD_FYP_WEB_APP_API()
     
-    imgpaths = [
-        "C:/Maha/Temp/FullSizeRender.jpg",
-        "C:/Maha/Temp/IMG_5892.JPEG",
-        "C:/Maha/Temp/IMG20191124112930.jpg",
-        "C:/Maha/Temp/IMG20221112195235.jpg",
-        "C:/Maha/Temp/IMG20221111091405.jpg" 
-    ]
-    for i in imgpaths:
-        A = web_app.get_img_data(i)
-        if A:
-            print(i,"OK")
-        else:
-            print(i,"NOT OK")
-        import time
-        time.sleep(1)
-    web_app.generate_map()
-    print("[+] MAP GENERATED")
+    # imgpaths = [
+    #     "C:/Maha/Temp/FullSizeRender.jpg",
+    #     "C:/Maha/Temp/IMG_5892.JPEG",
+    #     "C:/Maha/Temp/IMG20191124112930.jpg",
+    #     "C:/Maha/Temp/IMG20221112195235.jpg",
+    #     "C:/Maha/Temp/IMG20221111091405.jpg" 
+    # ]
+    # for i in imgpaths:
+    #     A = web_app.get_img_data(i)
+    #     if A:
+    #         print(i,"OK")
+    #     else:
+    #         print(i,"NOT OK")
+    #     import time
+    #     time.sleep(1)
+    # # web_app.generate_map()
+    # print("[+] MAP GENERATED")
     
-    # web_app.DESTROY()
+    web_app.DESTROY()
 
 
 if __name__ == '__main__':

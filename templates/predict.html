@@ -11,7 +11,7 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png" type="">
+  <link rel="shortcut icon" href={{ url_for("static", filename = "images/favicon.png" )}} type="">
 
   <title> Prediction (PHD) </title>
 
@@ -42,7 +42,6 @@
       <img src="images/hero-bg.png" alt="">
     </div>
 
-    <!-- header section strats -->
     <!-- header section strats -->
     <header class="header_section">
       <div class="container">
@@ -112,86 +111,45 @@
 
 
 
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-3 footer_col">
-          <div class="footer_contact">
-            <h4>
-              Reach at..
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  JNTUACEA, Ananthapur
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +01 1234567890
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  demo@gmail.com
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="footer_social">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true">facebook</i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true">twitter</i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true">linkedin</i>
-            </a>
-            <a href="">
-              <i class="fa fa-github" aria-hidden="true">github</i>
-            </a>
-          </div>
+ <!-- footer section -->
+ <footer class="footer_section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-3 footer_col">
+        <div class="footer_detail">
+          <h4>
+            About
+          </h4>
+          <p>
+            This web app is designed for The Pot Hole Detection on images and open CV and TensorFlow. After detecting the pothole, it will also mark the location of the pothole in the Google Maps.
+          </p>
         </div>
-        <div class="col-md-6 col-lg-3 footer_col">
-          <div class="footer_detail">
-            <h4>
+      </div>
+      <div class="col-md-6 col-lg-2 mx-auto footer_col">
+        <div class="footer_link_box">
+          <h4>
+            Links
+          </h4>
+          <div class="footer_links">
+            <a class="" href="{{ url_for('index' )}}">
+              Home
+            </a>
+            <a class="" href="{{ url_for('about')}}">
               About
-            </h4>
-            <p>
-              This web app is designed for The Pot Hole Detection on images and open CV and TensorFlow. After detecting the pothole, it will also mark the location of the pothole in the Google Maps.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-2 mx-auto footer_col">
-          <div class="footer_link_box">
-            <h4>
-              Links
-            </h4>
-            <div class="footer_links">
-              <a class="active" href="{{ url_for('index' )}}">
-                Home
-              </a>
-              <a class="" href="{{ url_for('about')}}">
-                About
-              </a>
-              <a class="" href="{{ url_for('predict' )}}">
-                Predict
-              </a>
-              <a class="" href="{{ url_for('maps' )}}">
-                Maps
-              </a>
-            </div>
+            </a>
+            <a class="active" href="{{ url_for('predict' )}}">
+              Predict
+            </a>
+            <a class="" href="{{ url_for('maps' )}}">
+              Maps
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </footer>
-  <!-- footer section -->
+  </div>
+</footer>
+<!-- footer section -->
 
  <!-- jQery -->
  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
