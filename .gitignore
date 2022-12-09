@@ -2,8 +2,8 @@
 /training_demo/pre-trained-models/
 /training_demo/images/
 /training_demo/exported-models/*
-/src/test_maha
-/Dataset/Result
+/src/test_maha/chatgpt
+# /Dataset/Result
 
 ./.vscode/*
 .vscode
