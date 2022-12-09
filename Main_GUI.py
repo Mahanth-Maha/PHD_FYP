@@ -1,8 +1,9 @@
+import setup
+
 import customtkinter
 import os
 from PIL import Image
 import phd_api
-
 
 class App(customtkinter.CTk):
     def __init__(self):

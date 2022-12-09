@@ -1,6 +1,8 @@
+import setup
 import sys
 from PIL import Image
 import cv2
+
 if __name__ == '__main__':
     # check if the user provided a file path as a command line argument
     if len(sys.argv) != 2:

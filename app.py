@@ -1,8 +1,11 @@
+import setup 
+
 import os
 from flask import Flask, app, request, render_template, send_from_directory
 
 from main import PHD_FYP_WEB_APP_API 
 from phd_api import PHD_API
+
 print("\n\n\nHang on tight \n\nLoading prereq....\n\n\n")
 web_app = PHD_FYP_WEB_APP_API()
 phd_run = PHD_API()
