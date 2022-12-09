@@ -49,10 +49,10 @@ def nres():
         filepath = os.path.join(basepath, 'uploads', f.filename)
         f.save(filepath)
         nresult = "NULL"
-        print(f'{filepath=},{f.filename=},{basepath=}')
+        print(f'{filepath=}\n,{f.filename=}\n,{basepath=}')
         detect_status = 0
         image_output_path, detect_Scores, detect_status = phd_run.run_phd_and_save_img(input_image_path=filepath)
-        print(f'{image_output_path=}, {detect_Scores=}, {detect_status=}')
+        print(f'{image_output_path=}\n, {detect_Scores=}\n, {detect_status=}\n')
         if detect_status == 0:
             nresult = "No potholes detected"
         elif detect_status == 1:

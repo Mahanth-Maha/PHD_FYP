@@ -3,7 +3,8 @@
 /training_demo/images/
 /training_demo/exported-models/*
 /src/test_maha/chatgpt
-# /Dataset/Result
+/Dataset/Result
+/uploads/
 
 ./.vscode/*
 .vscode
