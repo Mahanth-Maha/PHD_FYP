@@ -35,6 +35,8 @@ Python is popular in machine learning for several reasons. First, it is a high-l
 
 ## Testing custom images
 
+Please check the [project demonstration](https://youtu.be/dQw4w9WgXcQ) that I made before messing things up from Youtube
+
 extract [the zip file](https://1drv.ms/u/s!AhCzSwMWU4mgjWGoSiiHpkaqP8YB?e=vfD9JB) into ` training_demo\` folder.
 
 install python-3.9.X 
