@@ -15,6 +15,9 @@
 
   <title> Prediction (PHD) </title>
 
+   <!-- tail wind css -->
+   <link href="{{url_for('static',filename='css/main.css')}}" rel="stylesheet">
+
    <!-- bootstrap core css -->
    <link rel="stylesheet" type="text/css" href={{ url_for("static", filename = "css/bootstrap.css") }} />
 
@@ -108,48 +111,49 @@
   </section>
 
   <!-- end department section -->
-
-
-
- <!-- footer section -->
- <footer class="footer_section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-lg-3 footer_col">
-        <div class="footer_detail">
-          <h4>
-            About
-          </h4>
-          <p>
-            This web app is designed for The Pot Hole Detection on images and open CV and TensorFlow. After detecting the pothole, it will also mark the location of the pothole in the Google Maps.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-2 mx-auto footer_col">
-        <div class="footer_link_box">
-          <h4>
-            Links
-          </h4>
-          <div class="footer_links">
-            <a class="" href="{{ url_for('index' )}}">
-              Home
-            </a>
-            <a class="" href="{{ url_for('about')}}">
+  
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 footer_col">
+          <div class="footer_detail">
+            <h4>
               About
-            </a>
-            <a class="active" href="{{ url_for('predict' )}}">
-              Predict
-            </a>
-            <a class="" href="{{ url_for('maps' )}}">
-              Maps
-            </a>
+            </h4>
+            <p>
+              This web app is designed for The Pot Hole Detection on images and open CV and TensorFlow. After detecting the pothole, it will also mark the location of the pothole in the Google Maps.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto footer_col">
+          <div class="footer_link_box">
+            <h4>
+              Links
+            </h4>
+            <div >
+              <a class="" href="{{ url_for('index' )}}">
+                Home
+              </a>
+              <a class="" href="{{ url_for('about')}}">
+                About
+              </a>
+              <a class="active" href="{{ url_for('predict' )}}">
+                Predict
+              </a>
+              <a class="" href="{{ url_for('maps' )}}">
+                Maps
+              </a>
+              <a class="tw-text-blue-500" href="https://github.com/Mahanth-Maha/PHD_FYP/">
+                Project
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
-<!-- footer section -->
+  </footer>
+  <!-- footer section -->
 
  <!-- jQery -->
  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>

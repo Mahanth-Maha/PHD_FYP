@@ -7,7 +7,11 @@
 /uploads/*
 /database/allok.txt
 /static/temp/*
+/static/src/
 
+package-lock.json
+package.json
+tailwind.config.js
 
 ./.vscode/*
 .vscode

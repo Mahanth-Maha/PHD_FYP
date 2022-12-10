@@ -1,7 +1,5 @@
 import setup 
 
-import timeit
-
 import os
 # import shutil
 from PIL import Image
@@ -14,6 +12,8 @@ from phd_api import PHD_API
 print("\n\n\nHang on tight \n\nLoading prereq....\n\n\n")
 web_app = PHD_FYP_WEB_APP_API()
 phd_run = PHD_API()
+# web_app = None
+# phd_run = None
 
 app = Flask(__name__)
 
