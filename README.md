@@ -82,9 +82,25 @@ go to the web link it provides probably [http://127.0.0.1:8080/](http://127.0.0.
 
 ![DEMO_WEBAPP_4.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_WEBAPP_4.png)
 
-#### maps view
+### web app interface images in mobile
 
-![DEMO_WEBAPP_5_maps.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_WEBAPP_5_maps.png)
+#### Running app in mobile
+
+![DEMO_MOBILE_WEB_APP_1.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_1.png)
+
+#### website walk through in mobile
+
+![DEMO_MOBILE_WEB_APP_3.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_3.png)
+![DEMO_MOBILE_WEB_APP_2.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_2.png)
+![DEMO_MOBILE_WEB_APP_4.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_4.png)
+
+#### Results - WEB app in mobile
+
+![DEMO_MOBILE_WEB_APP_5.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_5.png)
+
+#### maps view in mobile
+
+![DEMO_MOBILE_WEB_APP_6.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_6.png)
 
 ## Running as a product for an image (CLI)
 
@@ -107,7 +123,6 @@ python Main_CLI.py <image_path>
 ![DEMO_CLI_OUT.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_CLI_OUT.png)
  
 
-
 ## Running as a product for an image (GUI)
 
 Select the image form the drop down and click Run.
@@ -127,10 +142,8 @@ python Main_GUI.py
 ![DEMO_GUI_Main_2_upload.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_GUI_Main_2_upload.png)
 
 ![DEMO_GUI_Main_3_result.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_GUI_Main_3_result.png)
- 
 
-
-## Build our custom app
+## Build your custom app using our model
 
 Yes, you can integrate pothole detection system into any custom app which is already written as an API in the file named as [phd_api.py](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/phd_api.py).
 
