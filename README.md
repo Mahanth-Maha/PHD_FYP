@@ -120,13 +120,13 @@ python Main_GUI.py
 
 #### running gui app
 
-![DEMO_GUI_MAIN_1.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_GUI_MAIN_1.png)
+![DEMO_GUI_Main_1.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_GUI_Main_1.png)
 
 #### Results - GUI
 
-![DEMO_GUI_MAIN_2_upload.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_GUI_MAIN_2_upload.png)
+![DEMO_GUI_Main_2_upload.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_GUI_Main_2_upload.png)
 
-![DEMO_GUI_MAIN_3_result.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_GUI_MAIN_3_result.png)
+![DEMO_GUI_Main_3_result.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_GUI_Main_3_result.png)
  
 
 
