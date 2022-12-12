@@ -86,21 +86,21 @@ go to the web link it provides probably [http://127.0.0.1:8080/](http://127.0.0.
 
 #### Running app in mobile
 
-![DEMO_MOBILE_WEB_APP_1.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_1.png)
+![DEMO_MOBILE_WEB_APP_1.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_1.jpg)
 
 #### website walk through in mobile
 
-![DEMO_MOBILE_WEB_APP_3.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_3.png)
-![DEMO_MOBILE_WEB_APP_2.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_2.png)
-![DEMO_MOBILE_WEB_APP_4.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_4.png)
+![DEMO_MOBILE_WEB_APP_3.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_3.jpg)
+![DEMO_MOBILE_WEB_APP_2.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_2.jpg)
+![DEMO_MOBILE_WEB_APP_4.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_4.jpg)
 
 #### Results - WEB app in mobile
 
-![DEMO_MOBILE_WEB_APP_5.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_5.png)
+![DEMO_MOBILE_WEB_APP_5.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_5.jpg)
 
 #### maps view in mobile
 
-![DEMO_MOBILE_WEB_APP_6.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_6.png)
+![DEMO_MOBILE_WEB_APP_6.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_6.jpg)
 
 ## Running as a product for an image (CLI)
 
