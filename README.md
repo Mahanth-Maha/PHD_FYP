@@ -23,17 +23,7 @@ In which our app can again be used by the government agencies to detect The poth
  
 Government bodies can use this app to locate the potholes that there exist in the roads and try to fix it. Or any citizens near the locations could try to fix it by covering it is something that it would make it gone. **Thus making the world a better place.**
 
-
-# Machine Learning
-
-## Tensorflow
-TensorFlow is an open-source software library for machine learning, specifically deep learning and numeric computation. It is often used for building and training machine learning models, particularly neural networks. TensorFlow allows developers to create data flow graphs, which are structures that describe how data moves through a graph of computational operations. This makes it easy to build and train complex models with many layers, and it also allows for efficient training on large datasets using parallel processing. TensorFlow has become one of the most popular tools for machine learning and deep learning, and is widely used in both industry and academia.
-## Object Detection API
-An object detection API is a type of software that can be used to identify objects within images or videos. These APIs typically use machine learning algorithms to identify and locate objects within the image or video, and can be used for a wide variety of applications, such as security and surveillance, image recognition, and autonomous vehicles. Object detection APIs can be used by developers to build applications that can automatically detect and identify objects within images or videos, making it possible to perform tasks such as tracking objects in a video feed or identifying objects in a photograph.
-## why python programming
-Python is popular in machine learning for several reasons. First, it is a high-level, general-purpose programming language, which means that it is easy to read and write, and it can be used for a wide variety of tasks, including building machine learning models. Second, Python has a large and active community of users, which means that there is a wealth of support and resources available for those learning to use the language, as well as a large number of libraries and frameworks that can be leveraged to build machine learning models more easily. Finally, Python has many powerful libraries and frameworks specifically designed for machine learning, such as TensorFlow, PyTorch, and scikit-learn, which make it a good choice for those looking to get started with machine learning.
-
-## Testing custom images
+# Testing custom images
 
 Please check the [project demonstration](https://youtu.be/dQw4w9WgXcQ) that I made before messing things up from Youtube
 
@@ -42,16 +32,44 @@ extract [the zip file](https://1drv.ms/u/s!AhCzSwMWU4mgjWGoSiiHpkaqP8YB?e=vfD9JB
 install python-3.9.X 
 go to the root folder of the project and run the command below (it is recommended to use a venv for testing the project)
 
+### Creating v-env to run project
 ```
-pip install -r requirements.txt
+conda create --name phd_fyp python==3.9.12
+conda activate phd_fyp
 ```
-### Running in a loop (debugging purpose)
-```
-python model_runnner.py
-```
-paste the image path when prompted (no image is shown) , after Successfully generating output, It re-runs the program again. To exit the program Press "exit" and enter enter(Return) Key.
 
-### Running as a product for an image (CLI)
+### NOTE : POSSIBLE ERROR while running the app 
+
+The tensorflow usual throws an error as tf.gfile.GFile not found or tf has no attribute named gfile.
+check reslving techniques here in 
+* [StackOverflow](https://stackoverflow.com/questions/55591437/attributeerror-module-tensorflow-has-no-attribute-gfile#:~:text=33-,in%202.0%2C%20tf.gfile.*%20is%20replaced%20by%20tf.io.gfile.*.,-when%20I%20get)
+
+* [Tensorflow Issues](https://github.com/tensorflow/tensorflow/issues/31315#:~:text=i%20solved%20the%20error%20by%20replacing%20tf.gfile.fastgfile%20to%20tf.io.gfile.gfile.)
+
+simply ,  ***Replace tf.gfile.GFile to tf.io.gfile.GFile at line number 137***
+
+# End User Product
+
+## Setup 
+the setup file is also included with requirements.txt, but _I have wrote the script_ in such a way that it ensures all the dependencies are installed on FIRST TIME RUN , ALL AT ONCE and no more installing or configuring is required except for the mentioned above
+
+Note : if one wants to delete entire database run `python main.py`, which deletes all the entries till now.
+
+## Web App
+
+make sure you are in root directory i.e, `PHD_FYP` and extracted the zip file into ` training_demo\` so that the structure will be ` training_demo\exported-models\models\` (be careful since it might be the case that it extracts ` training_demo\exported-models\exported-models\models\` if it's a windows OS)
+
+```
+python app.py
+```
+
+go to the web link it provides probably [http://127.0.0.1:8080/](http://127.0.0.1:8080/) , or better open which flask provides dynamically
+
+### web app interface images
+
+![]()
+
+## Running as a product for an image (CLI)
 
 By running this python script it opens the Input image and the output image generated in separate window.
 
@@ -60,7 +78,13 @@ Note : Replace the <image_path> with the actual image path while running the Scr
 python Main_CLI.py <image_path>
 ```
 
-### Running as a product for an image (GUI)
+
+### CLI app interface images
+
+![]()
+
+
+## Running as a product for an image (GUI)
 
 Select the image form the drop down and click Run.
 
@@ -68,7 +92,33 @@ Select the image form the drop down and click Run.
 python Main_GUI.py
 ```
 
-### THe Results
+### GUI app interface images
+
+![]()
+
+## Build our custom app
+
+Yes, you can integrate pothole detection system into any custom app which is already written as an API in the file named as [phd_api.py](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/phd_api.py).
+
+just import as
+```
+import phd_api
+
+#create object
+phd_run = PHD_API() 
+
+filepath = 'test.jpg'
+
+# use the model
+# saves output in /Dataset/Result folder
+phd_run.run_phd_and_save_img(input_image_path=filepath)
+
+# alternatively use this to not save result
+phd_run.run_phd(input_image_path=filepath)
+```
+
+
+### The Results
 
 the Resulting image will be saved in ` Dataset\Result ` folder
 
