@@ -5,7 +5,7 @@ The web app would include a way to upload the image that the user took of the po
 
 By using this markers on the location one could easily find out that the road that they are taking Contains a pothole, so They can slow down the vehicle or if they really want to avoid such potholes and don't, Make any damage to the vehicle, They could take another path which has the less potholes. 
 
-# PotHole
+## PotHole
 Potholes are a common problem on roads and highways. These pesky depressions in the road surface can cause serious damage to vehicles and be a major inconvenience for drivers.
 
 Potholes form when water seeps into cracks in the road surface and then freezes and expands. This expansion puts pressure on the surrounding pavement, eventually causing it to break and form a pothole. As vehicles drive over the weakened area, the pothole grows larger and deeper.
@@ -23,7 +23,7 @@ In which our app can again be used by the government agencies to detect The poth
  
 Government bodies can use this app to locate the potholes that there exist in the roads and try to fix it. Or any citizens near the locations could try to fix it by covering it is something that it would make it gone. **Thus making the world a better place.**
 
-# Testing custom images
+## Testing custom images
 
 Please check the [project demonstration](https://youtu.be/dQw4w9WgXcQ) that I made before messing things up from Youtube
 
@@ -42,15 +42,16 @@ conda activate phd_fyp
 
 The tensorflow usual throws an error as tf.gfile.GFile not found or tf has no attribute named gfile.
 check reslving techniques here in 
+
 * [StackOverflow](https://stackoverflow.com/questions/55591437/attributeerror-module-tensorflow-has-no-attribute-gfile#:~:text=33-,in%202.0%2C%20tf.gfile.*%20is%20replaced%20by%20tf.io.gfile.*.,-when%20I%20get)
 
 * [Tensorflow Issues](https://github.com/tensorflow/tensorflow/issues/31315#:~:text=i%20solved%20the%20error%20by%20replacing%20tf.gfile.fastgfile%20to%20tf.io.gfile.gfile.)
 
 simply ,  ***Replace tf.gfile.GFile to tf.io.gfile.GFile at line number 137***
 
-# End User Product
+## End User Product
 
-## Setup 
+### Setup 
 the setup file is also included with requirements.txt, but _I have wrote the script_ in such a way that it ensures all the dependencies are installed on FIRST TIME RUN , ALL AT ONCE and no more installing or configuring is required except for the mentioned above
 
 Note : if one wants to delete entire database run `python main.py`, which deletes all the entries till now.
@@ -67,7 +68,23 @@ go to the web link it provides probably [http://127.0.0.1:8080/](http://127.0.0.
 
 ### web app interface images
 
-![]()
+#### Running app
+
+![DEMO_WEBAPP_run.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_WEBAPP_run.png)
+
+#### website walk through
+
+![DEMO_WEBAPP_1.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_WEBAPP_1.png)
+![DEMO_WEBAPP_2.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_WEBAPP_2.png)
+![DEMO_WEBAPP_3.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_WEBAPP_3.png)
+
+#### Results - WEB app
+
+![DEMO_WEBAPP_4.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_WEBAPP_4.png)
+
+#### maps view
+
+![DEMO_WEBAPP_5_maps.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_WEBAPP_5_maps.png)
 
 ## Running as a product for an image (CLI)
 
@@ -81,7 +98,14 @@ python Main_CLI.py <image_path>
 
 ### CLI app interface images
 
-![]()
+#### running cli app
+
+![DEMO_CLI_OUT_run.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_CLI_OUT_run.png)
+
+#### Results - CLI
+
+![DEMO_CLI_OUT.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_CLI_OUT.png)
+ 
 
 
 ## Running as a product for an image (GUI)
@@ -94,14 +118,26 @@ python Main_GUI.py
 
 ### GUI app interface images
 
-![]()
+#### running gui app
+
+![DEMO_GUI_MAIN_1.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_GUI_MAIN_1.png)
+
+#### Results - GUI
+
+![DEMO_GUI_MAIN_2_upload.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_GUI_MAIN_2_upload.png)
+
+![DEMO_GUI_MAIN_3_result.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_GUI_MAIN_3_result.png)
+ 
+
 
 ## Build our custom app
 
 Yes, you can integrate pothole detection system into any custom app which is already written as an API in the file named as [phd_api.py](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/phd_api.py).
 
 just import as
+
 ```
+
 import phd_api
 
 #create object
@@ -115,8 +151,8 @@ phd_run.run_phd_and_save_img(input_image_path=filepath)
 
 # alternatively use this to not save result
 phd_run.run_phd(input_image_path=filepath)
-```
 
+```
 
 ### The Results
 
@@ -125,7 +161,8 @@ the Resulting image will be saved in ` Dataset\Result ` folder
 ## Demo
 
 Result for an image
-### Image 
+
+### Image
 
 ![Original](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/Dataset/train/potholes/img00000.JPEG)
 
