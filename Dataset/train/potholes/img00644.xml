@@ -1,13 +1,13 @@
 <annotation>
 	<folder>potholes</folder>
-	<filename>img00056.JPEG</filename>
-	<path>M:\PHD_FYP\Dataset\train\potholes\img00056.JPEG</path>
+	<filename>img00644.JPEG</filename>
+	<path>M:\PHD_FYP\Dataset\train\potholes\img00644.JPEG</path>
 	<source>
 		<database>Unknown</database>
 	</source>
 	<size>
-		<width>347</width>
-		<height>270</height>
+		<width>1299</width>
+		<height>971</height>
 		<depth>3</depth>
 	</size>
 	<segmented>0</segmented>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>22</xmin>
-			<ymin>29</ymin>
-			<xmax>340</xmax>
-			<ymax>207</ymax>
+			<xmin>266</xmin>
+			<ymin>371</ymin>
+			<xmax>754</xmax>
+			<ymax>504</ymax>
 		</bndbox>
 	</object>
 </annotation>
