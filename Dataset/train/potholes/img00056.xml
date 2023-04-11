@@ -1,7 +1,7 @@
 <annotation>
-	<folder>images</folder>
+	<folder>potholes</folder>
 	<filename>img00056.JPEG</filename>
-	<path>M:\phd_fyp_main\TensorFlow\workspace\training_demo\images\img00056.JPEG</path>
+	<path>M:\PHD_FYP\Dataset\train\potholes\img00056.JPEG</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -17,9 +17,9 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>20</xmin>
+			<xmin>22</xmin>
 			<ymin>29</ymin>
-			<xmax>338</xmax>
+			<xmax>340</xmax>
 			<ymax>207</ymax>
 		</bndbox>
 	</object>

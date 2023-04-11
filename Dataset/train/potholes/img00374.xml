@@ -1,0 +1,26 @@
+<annotation>
+	<folder>potholes</folder>
+	<filename>img00374.JPEG</filename>
+	<path>M:\PHD_FYP\Dataset\train\potholes\img00374.JPEG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1200</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>pothole</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>114</xmin>
+			<ymin>43</ymin>
+			<xmax>1200</xmax>
+			<ymax>590</ymax>
+		</bndbox>
+	</object>
+</annotation>
