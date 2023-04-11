@@ -1,5 +1,5 @@
 import setup 
-
+print("Welcome...")
 import os
 # import shutil
 from PIL import Image
@@ -66,16 +66,22 @@ def nres():
             if detect_status == 0:
                 nresult = "No potholes detected"
                 NoPotHolesErr = True
+                loc_status = (False,"No Location Data")
             elif detect_status == 1:
                 nresult = "Pothole detected"
+                with Image.open(filepath) as img:
+                    img.save(uploaded_img_to_show , format='JPEG')
+                with Image.open(image_output_path) as img:
+                    img.save(resulted_img_to_show , format='JPEG')
+                loc_status = web_app.get_img_data(filepath)
             else:
                 nresult = "Potholes detected"
-            loc_status = web_app.get_img_data(filepath)
+                with Image.open(filepath) as img:
+                    img.save(uploaded_img_to_show , format='JPEG')
+                with Image.open(image_output_path) as img:
+                    img.save(resulted_img_to_show , format='JPEG')
+                loc_status = web_app.get_img_data(filepath)
             # Open the image file
-            with Image.open(filepath) as img:
-                img.save(uploaded_img_to_show , format='JPEG')
-            with Image.open(image_output_path) as img:
-                img.save(resulted_img_to_show , format='JPEG')
             # COPYING
             # shutil.copyfile(filepath, uploaded_img_to_show)
             # shutil.copyfile(image_output_path, resulted_img_to_show)
@@ -110,5 +116,6 @@ def nres():
 
 
 if __name__ == "__main__":
-    app.run(debug=False, port=8080)
-    # app.run(debug=False,host= 'HOST_IP', port=6969)
+    # app.run(debug=False, port=8080)
+    # app.run(debug=False,host= '192.168.0.160', port=8080)
+    app.run(debug=False,host= '192.168.0.122', port=4444)

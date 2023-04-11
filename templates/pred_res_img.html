@@ -87,7 +87,7 @@
  <!-- department section -->
  <div class=centered >
  {% if NoFIleErr %}
- <h5 class=centered class="title text-muted"> 
+ <h5 class=centered class="title text-muted" style="text-align:center; font-size: 2em;"> 
    {{NoFIleErr}}
    <div class="btn-box">
     <a href="{{ url_for('pred_res')}}">
@@ -96,7 +96,7 @@
   </div>
  </h5>
  {% elif NoPotHolesErr %}
- <h5 class=centered class="title text-muted"> 
+ <h5 class=centered class="title text-muted" style="text-align:center; font-size: 2em;"> 
   No Potholes Detected in the upoladed image please try again 
    <div class="btn-box">
     <a href="{{ url_for('pred_res')}}">
@@ -104,30 +104,30 @@
     </a>
   </div>
  </h5>
- 
  {% elif prediction %}
+
  <div>
-  <h5 class=centered class="title text-muted"> 
-    Result : {{prediction}}
-  </h5>
-</div>
- <div  style = "display:flex;" >
-    <div class="img-box">
-      <img src={{url_for('static',filename = 'temp/original_img.JPEG')}} style="width:100px;height:100px;float:left;padx:10px;pady:10px;">
-    </div>
-    <div class="img-box">
-      <img src={{url_for('static',filename = 'temp/result_img.JPEG')}} style="width:100px;height:100px;float:right;padx:10px;pady:10px;">
-    </div>
+   <h5 class="centered title text-muted" style="text-align:center; font-size: 2em;"> 
+     Result: {{prediction}}
+   </h5>
+ </div>
+ <div style="display:flex; justify-content:center; align-items:center;">
+   <div class="img-box">
+     <img src="{{url_for('static',filename = 'temp/original_img.JPEG')}}" style="width:300px;height:300px;margin: 10px;">
+   </div>
+   <div class="img-box">
+     <img src="{{url_for('static',filename = 'temp/result_img.JPEG')}}" style="width:300px;height:300px;margin: 10px;">
+   </div>
  </div>
  <div>
-  <br>
-  <p> {{ phd_desc }}</p>
-  <br>
-  <p> {{ loc_desc }}</p>
-  <br>
-  <p> {{ map_desc }}</p>
-</div>
- {% endif %}
+   <br>
+   <p style="text-align:center; font-size: 1.5em;"> {{ phd_desc }}</p>
+   <br>
+   <p style="text-align:center; font-size: 1.5em;"> {{ loc_desc }}</p>
+   <br>
+   <p style="text-align:center; font-size: 1.5em;"> {{ map_desc }}</p>
+ </div>
+ {% endif %}
 </div>
  <!-- end department section -->
 
