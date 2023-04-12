@@ -4,7 +4,7 @@ import os
 # import shutil
 from PIL import Image
 
-from flask import Flask, app, request, render_template, send_from_directory
+from flask import Flask, app, redirect, request, render_template, send_from_directory
 
 from main import PHD_FYP_WEB_APP_API 
 from phd_api import PHD_API
@@ -21,6 +21,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/locerror')
+def locerror():
+    return render_template('locerror.html')
 
 @app.route('/index')
 def inde1():
@@ -43,6 +46,11 @@ def pred_res():
 
 @app.route('/maps')
 def maps():
+    maps_html = False
+    with open('templates/maps.html') as f:
+        maps_html = f.read()
+    if maps_html in ("", " ", None,) :
+        return redirect('/locerror')
     return render_template('maps.html')
 
 @app.route('/result', methods=["GET", "POST"])
@@ -116,6 +124,6 @@ def nres():
 
 
 if __name__ == "__main__":
-    # app.run(debug=False, port=8080)
+    app.run(debug=False, port=8080)
     # app.run(debug=False,host= '192.168.0.160', port=8080)
-    app.run(debug=False,host= '192.168.0.122', port=4444)
+    # app.run(debug=False,host= '192.168.0.122', port=4444)

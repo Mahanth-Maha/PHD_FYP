@@ -5,8 +5,15 @@
 /src/test_maha/chatgpt
 /Dataset/Result
 /database/allok.txt
+/database/*
 /static/src/
-
+/uploads/*
+/hooks
+/static/temp/*
+/templates/basic_maps
+/templates/dynamic_map*
+/templates/open_maps*
+/templates/maps_openApi*
 package-lock.json
 package.json
 tailwind.config.js
