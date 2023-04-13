@@ -7,7 +7,7 @@ By using this markers on the location one could easily find out that the road th
 
 ## Testing custom images
 
-extract [the zip file](https://1drv.ms/u/s!AhCzSwMWU4mgjWGoSiiHpkaqP8YB?e=vfD9JB) into ` training_demo\` folder & then run
+extract [the zip file](https://1drv.ms/u/s!AhCzSwMWU4mgjWNg2IixRGDqSpdw?e=zSWaGJ) into ` training_demo\` folder & then run
 
 extract 'exported_models' into ` training_demo\` folder. (be careful while extracting, it should not create 'exported_models' folder 2 times)
 
