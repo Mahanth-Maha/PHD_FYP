@@ -7,12 +7,24 @@ By using this markers on the location one could easily find out that the road th
 
 ## Testing custom images
 
-Please check the [project demonstration](https://youtu.be/dQw4w9WgXcQ) that I made before messing things up from Youtube
+extract [the zip file](https://1drv.ms/u/s!AhCzSwMWU4mgjWGoSiiHpkaqP8YB?e=vfD9JB) into ` training_demo\` folder & then run
 
-extract 'exported_models' into ` training_demo\` folder.
+extract 'exported_models' into ` training_demo\` folder. (be careful while extracting, it should not create 'exported_models' folder 2 times)
 
-install python-3.9.X 
+install python-3.9.X  ( prefer 3.9.12 )
 go to the root folder of the project and run the command below (it is recommended to use a venv for testing the project)
+
+## Anaconda
+
+install the anaconda to make the env creation easy [Download Here!](https://www.anaconda.com/)
+
+### setting up
+open the Anaconda Command Prompt or Anaconda Powershell Prompt after installtion 
+
+Navigate to project dir 
+```
+cd <PATH>\PHD_FYP
+```
 
 ### Creating v-env to run project
 ```
@@ -64,25 +76,19 @@ go to the web link it provides probably [http://127.0.0.1:8080/](http://127.0.0.
 
 ![DEMO_WEBAPP_4.png](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_WEBAPP_4.png)
 
-### web app interface images in mobile
-
-#### Running app in mobile
-
-![DEMO_MOBILE_WEB_APP_1.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_1.jpg)
+## Running app in mobile
 
 #### website walk through in mobile
 
-![DEMO_MOBILE_WEB_APP_3.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_3.jpg)
-![DEMO_MOBILE_WEB_APP_2.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_2.jpg)
-![DEMO_MOBILE_WEB_APP_4.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_4.jpg)
+Demo  |  Images  
+:-------------------------:|:-------------------------:|
+![DEMO_MOBILE_WEB_APP_1.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_1.jpg) | ![DEMO_MOBILE_WEB_APP_3.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_3.jpg) 
+![DEMO_MOBILE_WEB_APP_2.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_2.jpg) | ![DEMO_MOBILE_WEB_APP_4.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_4.jpg)
 
-#### Results - WEB app in mobile
-
-![DEMO_MOBILE_WEB_APP_5.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_5.jpg)
-
-#### maps view in mobile
-
-![DEMO_MOBILE_WEB_APP_6.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_6.jpg)
+#### Results and maps
+WEB app in mobile          |  MAPS view in mobile
+:-------------------------:|:-------------------------:
+![DEMO_MOBILE_WEB_APP_5.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_5.jpg) | ![DEMO_MOBILE_WEB_APP_6.jpg](https://github.com/Mahanth-Maha/PHD_FYP/blob/main/img/DEMO_MOBILE_WEB_APP_6.jpg)
 
 ## Running as a product for an image (CLI)
 
